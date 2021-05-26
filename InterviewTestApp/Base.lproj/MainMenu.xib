@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="InterviewTestApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="dEc-Gi-5HM" id="fmJ-tg-Ihf"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -725,6 +726,9 @@
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="pu6-4H-3V3" name="value" keyPath="objectValue.name" id="RdZ-UN-Tm0"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -755,12 +759,20 @@
                                                     <rect key="frame" x="139" y="0.0" width="332" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-LI-V2I">
-                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="48"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-LI-V2I">
+                                                            <rect key="frame" x="0.0" y="0.0" width="332" height="24"/>
                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="LjU-DR-FSL"/>
+                                                            <connections>
+                                                                <binding destination="Urr-Rr-pzr" name="value" keyPath="objectValue.image" id="VIB-z3-cFf"/>
+                                                            </connections>
                                                         </imageView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="hVv-LI-V2I" secondAttribute="bottom" id="9M0-Mx-9zQ"/>
+                                                        <constraint firstItem="hVv-LI-V2I" firstAttribute="top" secondItem="Urr-Rr-pzr" secondAttribute="top" id="YY0-W8-d3p"/>
+                                                        <constraint firstItem="hVv-LI-V2I" firstAttribute="leading" secondItem="Urr-Rr-pzr" secondAttribute="leading" id="gqA-sK-cVi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hVv-LI-V2I" secondAttribute="trailing" id="h1L-5w-2ea"/>
+                                                    </constraints>
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>

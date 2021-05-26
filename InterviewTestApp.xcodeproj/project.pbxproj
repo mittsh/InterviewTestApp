@@ -13,6 +13,7 @@
 		AE692AF9265E54C6008D28EA /* InterviewTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE692AF8265E54C6008D28EA /* InterviewTestAppTests.swift */; };
 		AE692B04265E54C6008D28EA /* InterviewTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE692B03265E54C6008D28EA /* InterviewTestAppUITests.swift */; };
 		AE692B15265E54F1008D28EA /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE692B14265E54F1008D28EA /* ImageDownloader.swift */; };
+		AE692B1A265E5D6D008D28EA /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE692B19265E5D6D008D28EA /* ImageFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		AE692B03265E54C6008D28EA /* InterviewTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewTestAppUITests.swift; sourceTree = "<group>"; };
 		AE692B05265E54C6008D28EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE692B14265E54F1008D28EA /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		AE692B19265E5D6D008D28EA /* ImageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				AE692AE7265E54C3008D28EA /* AppDelegate.swift */,
 				AE692B14265E54F1008D28EA /* ImageDownloader.swift */,
+				AE692B19265E5D6D008D28EA /* ImageFile.swift */,
 				AE692AE9265E54C6008D28EA /* Assets.xcassets */,
 				AE692AEB265E54C6008D28EA /* MainMenu.xib */,
 				AE692AEE265E54C6008D28EA /* Info.plist */,
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE692B1A265E5D6D008D28EA /* ImageFile.swift in Sources */,
 				AE692B15265E54F1008D28EA /* ImageDownloader.swift in Sources */,
 				AE692AE8265E54C3008D28EA /* AppDelegate.swift in Sources */,
 			);

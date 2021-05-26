@@ -8,8 +8,8 @@
 import Foundation
 import AppKit
 
-func downloadImages(imageUrls: [String]) -> [NSImage] {
-    var images: [NSImage] = []
+func downloadImages(imageUrls: [String]) -> [ImageFile] {
+    var images: [ImageFile] = []
     
     // create a concurrent queue
     let concurrentQueue = DispatchQueue(label: "myConcurrentQueue", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
@@ -18,10 +18,12 @@ func downloadImages(imageUrls: [String]) -> [NSImage] {
     for i in 0 ..< imageUrls.count {
         concurrentQueue.async {
             do {
-                let data = try Data(contentsOf: URL(string: imageUrls[i])!)
+                let url = URL(string: imageUrls[i])!
+                let data = try Data(contentsOf: url)
                 if let image = NSImage(data: data) {
+                    let imageFile = ImageFile(name: url.lastPathComponent, url: url, image: image)
                     DispatchQueue.main.async {
-                        images.append(image)
+                        images.append(imageFile)
                     }
                 }
             } catch {
